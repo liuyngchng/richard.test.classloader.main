@@ -7,8 +7,8 @@ but only one class byte code can be used in JVM.
 so,how it will work in the situation?
 # 2. How to do ?
 ## 2.1 pom dependency
-```java  
-git@111.204.100.90:liuyngchng/richard.test.classloader.git
+```
+git@github.com:liuyngchng/richard.test.classloader.git
 cd richard.test.classloader
 rename <artifactId>richard.test.classloader</artifactId>  as <artifactId>richard.test.classloader1</artifactId>
 replace text in src/main/java/richard/test/classloader/TestClass.java "This is me from richard.test.classloader!" with "This is me from richard.test.classloader1!"
@@ -20,7 +20,7 @@ mvn clean compile install
 ```
 ## 2.2 package and run
 ```
-git clone git@111.204.100.90:liuyngchng/richard.test.classloader.main.git
+git clone git@github.com:liuyngchng/richard.test.classloader.main.git
 cd richard.test.classloader.main
 mvn clean compile package
 cd target
@@ -33,10 +33,10 @@ java -cp ./richard.test.classloader.main-1.0.jar:./richard.test.classloader2-1.0
 
 # 3. Result
 
-```java  
+```
 RicharddeMac-mini:target richard$ java -cp ./richard.test.classloader.main-1.0.jar:./richard.test.classloader2-1.0.jar:./richard.test.classloader1-1.0.jar richard.test.classloader.Bootstrap
 This is me from richard.test.classloader2!
-RicharddeMac-mini:target richard$ 
+RicharddeMac-mini:target richard$
 RicharddeMac-mini:target richard$ java -cp ./richard.test.classloader.main-1.0.jar:./richard.test.classloader1-1.0.jar:./richard.test.classloader2-1.0.jar richard.test.classloader.Bootstrap
 This is me from richard.test.classloader1!
 RicharddeMac-mini:target richard$
