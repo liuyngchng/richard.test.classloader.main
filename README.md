@@ -1,7 +1,10 @@
 
 # 1. Introduction
-For test classloader, when there is a class with same canonical name be load twice in jvm,  
-how it will work.
+For classloader test, when there is a class with same canonical name，   
+but with different "artifactId" or "version"  in pom,  
+it seems two different jar would be load in jvm,  
+but only one class byte code can be used in JVM.  
+so,how it will work in the situation?
 # 2. How to do ?
 ## 2.1 pom dependency
 ```java  
@@ -40,4 +43,4 @@ RicharddeMac-mini:target richard$
 ```
 # 4. Conclusion    
 
-通过控制 classpath 中 jar 包的出现顺序，来实现对不同 jar 包中相同类名的加载的控制
+通过控制 classpath 中 jar 包的顺序，来实现对不同 jar 包中相同类名的类的加载的控制
