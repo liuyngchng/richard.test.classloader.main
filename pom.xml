@@ -10,13 +10,13 @@
     <dependencies>
         <dependency>
             <groupId>richard.test</groupId>
-            <artifactId>richard.test.classloader</artifactId>
+            <artifactId>richard.test.classloader1</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>richard.test</groupId>
-            <artifactId>richard.test.classloader</artifactId>
-            <version>2.0</version>
+            <artifactId>richard.test.classloader2</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
